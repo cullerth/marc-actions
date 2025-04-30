@@ -5,13 +5,13 @@ from functions import *
 
 # get file with records to validate
 script_directory = os.path.dirname(os.path.abspath(sys.argv[0])) 
-records_to_update = "outputs/2-test-updated_pymarc.mrc"
+records_to_update = f"outputs/2-test-updated-{current_date}_pymarc.mrc"
 
 # get output dir
 output_dir = script_directory + "/outputs"
 
 # get batch name
-batch_name = "3-test-validated"
+batch_name = f"3-test-validated-{current_date}"
 
 # instantiate list to hold invalid records
 invalid_records = []

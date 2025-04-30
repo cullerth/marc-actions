@@ -2,7 +2,12 @@ from pymarc import *
 from pathlib import Path
 import csv
 from datetime import datetime
+
+def current_date():
+    return datetime.today().strftime('%Y%m%d')
     
+current_date = current_date()
+
 def marc_input(batch: str) -> list:
     """
     Reads a MARC record or record set and creates a pymarc object. 

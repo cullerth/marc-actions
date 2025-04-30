@@ -11,7 +11,7 @@ input_file = script_directory + "/inputs/test-marc-data.xml"
 output_dir = script_directory + "/outputs"
 
 # get batch name
-batch_name = "1-test-converted"
+batch_name = f"1-test-converted-{current_date}"
 # batch_name = input("Enter batch name: ")
 
 # convert input marcxml to pymarc

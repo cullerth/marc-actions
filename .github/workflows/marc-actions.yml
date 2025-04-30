@@ -18,6 +18,13 @@ jobs:
         run: python 2-update-marc-records.py
       - name: Validate records
         run: python 3-validate-marc-records.py
-      - name: Download all workflow run artifacts
-        uses: actions/download-artifact@v4
+      - name: Commit output files
+        run: |
+          git config --local user.email "tculler@umich.edu"
+          git config --local user.name "cullerth"
+          git add ./outputs
+          git commit -m "Adding new output files"
+      - name: Push changes
+        run: | 
+          git push
       - run: echo "🍏 This job's status is ${{ job.status }}."

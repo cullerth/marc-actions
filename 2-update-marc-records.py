@@ -5,13 +5,13 @@ from functions import *
 
 # get file with records to update
 script_directory = os.path.dirname(os.path.abspath(sys.argv[0])) 
-records_to_update = "outputs/1-test-converted_pymarc.mrc"
+records_to_update = f"outputs/1-test-converted-{current_date}_pymarc.mrc"
 
 # get output dir
 output_dir = script_directory + "/outputs"
 
 # get batch name
-batch_name = "2-test-updated"
+batch_name = f"2-test-updated-{current_date}"
 
 # instantiate list to hold updated records
 updated_pymarc_records = list()
