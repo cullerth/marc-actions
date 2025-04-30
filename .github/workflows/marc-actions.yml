@@ -3,9 +3,6 @@ on: [push]
 jobs:
   Run-Scripts:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./marc-actions
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
