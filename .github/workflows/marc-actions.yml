@@ -17,7 +17,7 @@ jobs:
       - name: Update records
         run: python 2-update-marc-records.py
       - name: Validate records
-        run: python 3-validate-marc_records.py
+        run: python 3-validate-marc-records.py
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
