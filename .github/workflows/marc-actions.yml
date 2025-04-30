@@ -11,11 +11,11 @@ jobs:
         with:
           python-version: '3.13.3'
       - name: Transform from marcxml to mrc
-        run: ./1-convert-xml-to-marc.py
+        run: python 1-convert-xml-to-marc.py
       - name: Update records
-        run: ./2-update-marc-records.py
+        run: python 2-update-marc-records.py
       - name: Validate records
-        run: ./3-validate-marc_records.py
+        run: python 3-validate-marc_records.py
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
