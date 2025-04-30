@@ -11,7 +11,7 @@ records_to_update = "outputs/1-test-converted_pymarc.mrc"
 output_dir = script_directory + "/outputs"
 
 # get batch name
-batch_name = f"2-test-updated-{current_time()}"
+batch_name = "2-test-updated"
 
 # instantiate list to hold updated records
 updated_pymarc_records = list()
