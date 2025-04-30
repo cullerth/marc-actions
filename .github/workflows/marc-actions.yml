@@ -1,0 +1,18 @@
+name: Transform Marc Records
+on: [push]
+jobs:
+  Run-Scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Transform from marcxml to mrc
+        run: ./1-convert-xml-to-marc.py
+      - name: Update records
+        run: ./2-update-marc-records.py
+      - name: Validate records
+        run: .3/validate-marc_records.py
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
