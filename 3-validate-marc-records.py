@@ -11,7 +11,7 @@ records_to_update = "outputs/2-test-updated_pymarc.mrc"
 output_dir = script_directory + "/outputs"
 
 # get batch name
-batch_name = "3-test-validated"
+batch_name = f"3-test-validated{current_time()}"
 
 # instantiate list to hold invalid records
 invalid_records = []
