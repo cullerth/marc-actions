@@ -2,6 +2,8 @@ name: Transform Marc Records
 on: [push]
 jobs:
   Run-Scripts:
+    permissions: 
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
