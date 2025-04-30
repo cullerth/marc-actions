@@ -3,6 +3,9 @@ on: [push]
 jobs:
   Run-Scripts:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./marc-actions
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
@@ -11,7 +14,7 @@ jobs:
       - name: Update records
         run: ./2-update-marc-records.py
       - name: Validate records
-        run: .3/validate-marc_records.py
+        run: ./3-validate-marc_records.py
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
