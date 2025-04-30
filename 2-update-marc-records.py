@@ -36,6 +36,5 @@ for record in reader:
 # output to .mrc and .csv files
 marc_output(updated_pymarc_records, output_dir, batch_name)
 
-print("Complete! Example record:")
-print(updated_pymarc_records[0])
+print("Complete!")
 
