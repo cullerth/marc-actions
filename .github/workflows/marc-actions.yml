@@ -18,7 +18,6 @@ jobs:
         run: python 2-update-marc-records.py
       - name: Validate records
         run: python 3-validate-marc-records.py
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@v4
       - run: echo "🍏 This job's status is ${{ job.status }}."
